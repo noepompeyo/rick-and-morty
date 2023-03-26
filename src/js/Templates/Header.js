@@ -1,3 +1,5 @@
+import "../../style/style.css"
+
 const Header = () => {
     const view = `
     <div class="Header-main">

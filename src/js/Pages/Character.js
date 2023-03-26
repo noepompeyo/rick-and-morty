@@ -1,22 +1,21 @@
-import getHash from "../../utils/getHash"
-import getData from "../../utils/getData"
-
-
+import getHash from "../../utils/getHash";
+import getData from "../../utils/getData";
+import "../../style/style.css"
 
 
 const Character = async () => {
-const id = getHash();
-const character = await getData(id);
+  const id = getHash();
+  const character = await getData(id);
 
-    const view = `
-
-    <div class="Character-inner">
-    <article class="Character-card">
+  const view = `
+   
+    <div class=" Characteres Characters-inner" >
+    <article class="Characters-card">
     <img src="${character.image}"  alt="${character.name}"/>
     <h2>${character.name}</h2>
     </article>
-
-    <article class="Character-card">
+    
+    <article class="Characters-card">
     <h3>Episodes:<span>${character.episode.length}</span></h3>
     <h3>Status:<span>${character.status}</span></h3>
     <h3>Species:<span>${character.gender}</span></h3>
@@ -25,13 +24,12 @@ const character = await getData(id);
     </article>
     
     
+    
     </div>
     
     
     `;
-    return view;
-
+  return view;
 };
 
-
-export default Character
+export default Character;
