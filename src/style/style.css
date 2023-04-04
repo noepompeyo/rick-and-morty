@@ -10,10 +10,22 @@ body {
 
 .Header-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
+.Header-logo .logo-lg {
+    width: 8em;
+    height: 1.8em;
+    object-fit: cover;
+}
+.Header-logo .logo-sm {
+    width: 75px;
+    height: 75px;
+}
+.Header-Nav a {
+    font-size: 0.7em;
+}
 .Header a {
     text-decoration: none;
     color: #15302C;
@@ -21,7 +33,7 @@ body {
 
 .Main {
     padding: 10px;
-    grid-template-columns: minmax(auto, 976px);
+    grid-template-columns: minmax(936px);
     display: grid;
     justify-content: center;
 }
@@ -103,12 +115,24 @@ body {
     from {
         opacity: 0;
     }
-
+    
     to {
         opacity: 1;
     }
 }
 
+@media screen and (max-width: 459px) {
+    .Header-logo .logo-lg  {
+        display: none;
+        
+    }
+}
+@media screen and (min-width: 458px) {
+    .Header-logo .logo-sm  {
+        display: none;
+        
+    }
+}
 .Main-loading {
     border: 4px solid #f3f3f3;
     border-top: 4px solid #3498db;
@@ -125,5 +149,15 @@ body {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 450px) {
+    .Characters {
+        display: flex;
+        flex-direction: column;
+    }
+    .Characters-inner {
+        display: flex;
+        flex-direction: column;
     }
 }
